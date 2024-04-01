@@ -1,0 +1,744 @@
+{
+  "alternateName": "Disease prediction dataset based on blood samples ",
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "column": "ml:column",
+    "extract": "ml:extract",
+    "field": "ml:field",
+    "fileProperty": "ml:fileProperty",
+    "format": "ml:format",
+    "includes": "ml:includes",
+    "isEnumeration": "ml:isEnumeration",
+    "jsonPath": "ml:jsonPath",
+    "ml": "http://mlcommons.org/schema/",
+    "parentField": "ml:parentField",
+    "path": "ml:path",
+    "recordSet": "ml:recordSet",
+    "references": "ml:references",
+    "regex": "ml:regex",
+    "repeated": "ml:repeated",
+    "replace": "ml:replace",
+    "sc": "https://schema.org/",
+    "separator": "ml:separator",
+    "source": "ml:source",
+    "subField": "ml:subField",
+    "transform": "ml:transform",
+    "data": {
+      "@id": "ml:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "ml:dataType",
+      "@type": "@vocab"
+    }
+  },
+  "citation": "None",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "url": "https://www.kaggle.com/datasets/ehababoelnaga/multiple-disease-prediction",
+  "distribution": [
+    {
+      "contentUrl": "https://www.kaggle.com/api/v1/datasets/download/ehababoelnaga/multiple-disease-prediction",
+      "contentSize": "285.304 KB",
+      "md5": "G4G9VeHYlSzVvlbJOalUgw==",
+      "fileExtension": ".zip",
+      "encodingFormat": "application/zip",
+      "@type": "sc:FileObject",
+      "name": "archive.zip",
+      "description": "Archive containing all the contents of the Multiple Disease Prediction dataset"
+    },
+    {
+      "contentUrl": "Blood_samples_dataset_balanced_2(f).csv",
+      "containedIn": "archive.zip",
+      "encodingFormat": "text/csv",
+      "@type": "sc:FileObject",
+      "name": "Blood_samples_dataset_balanced_2-f-.csv",
+      "description": "# The feature used in this dataset and it\u0027s discerption  or the (Blood parameters):\n * Cholesterol: This is the level of cholesterol in the blood, measured in milligrams per deciliter (mg/dL).\n * Hemoglobin: This is the protein in red blood cells that carries oxygen from the lungs to the rest of the body\n * Platelets: Platelets are blood cells that help with clotting\n * White Blood Cells (WBC): These are cells of the immune system that help fight infections\n * Red Blood Cells (RBC): These are the cells that carry oxygen from the lungs to the rest of the body\n * Hematocrit: This is the percentage of blood volume that is occupied by red blood cells\n * Mean Corpuscular Volume (MCV): This is the average volume of red blood cells\n * Mean Corpuscular Hemoglobin (MCH): This is the average amount of hemoglobin in a red blood cell\n * Mean Corpuscular Hemoglobin Concentration (MCHC): This is the average concentration of hemoglobin in a red blood cell\n * Insulin: This is a hormone that helps regulate blood sugar levels\n * BMI (Body Mass Index): This is a measure of body fat based on height and weight\n * Systolic Blood Pressure (SBP): This is the pressure in the arteries when the heart beats\n * Diastolic Blood Pressure (DBP): This is the pressure in the arteries when the heart is at rest between beats\n * Triglycerides: These are a type of fat found in the blood, measured in milligrams per deciliter (mg/dL)\n * HbA1c (Glycated Hemoglobin): This is a measure of average blood sugar levels over the past two to three months\n * LDL (Low-Density Lipoprotein) Cholesterol: This is the \u0022bad\u0022 cholesterol that can build up in the arteries\n * HDL (High-Density Lipoprotein) Cholesterol: This is the \u0022good\u0022 cholesterol that helps remove LDL cholesterol from the arteries\n * ALT (Alanine Aminotransferase): This is an enzyme found primarily in the liver\n * AST (Aspartate Aminotransferase): This is an enzyme found in various tissues including the liver and heart\n * Heart Rate: This is the number of heartbeats per minute (bpm)\n * Creatinine: This is a waste product produced by muscles and filtered out of the blood by the kidneys\n * Troponin: This is a protein released into the bloodstream when there is damage to the heart muscle\n * C-reactive Protein (CRP): This is a marker of inflammation in the body\n * Disease: This indicates whether he has a specific disease or not"
+    },
+    {
+      "contentUrl": "blood_samples_dataset_test.csv",
+      "containedIn": "archive.zip",
+      "encodingFormat": "text/csv",
+      "@type": "sc:FileObject",
+      "name": "blood_samples_dataset_test.csv"
+    }
+  ],
+  "recordSet": [
+    {
+      "field": [
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Glucose"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Glucose",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Cholesterol"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Cholesterol",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Hemoglobin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Hemoglobin",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Platelets"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Platelets",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "White Blood Cells"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "White-Blood-Cells",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Red Blood Cells"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Red-Blood-Cells",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Hematocrit"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Hematocrit",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Mean Corpuscular Volume"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Mean-Corpuscular-Volume",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Mean Corpuscular Hemoglobin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Mean-Corpuscular-Hemoglobin",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Mean Corpuscular Hemoglobin Concentration"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Mean-Corpuscular-Hemoglobin-Concentration",
+          "description": ""
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Insulin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Insulin"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "BMI"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "BMI"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Systolic Blood Pressure"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Systolic-Blood-Pressure"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Diastolic Blood Pressure"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Diastolic-Blood-Pressure"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Triglycerides"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Triglycerides"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "HbA1c"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "HbA1c"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "LDL Cholesterol"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "LDL-Cholesterol"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "HDL Cholesterol"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "HDL-Cholesterol"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "ALT"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "ALT"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "AST"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "AST"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Heart Rate"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Heart-Rate"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Creatinine"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Creatinine"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Troponin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Troponin"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "C-reactive Protein"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "C-reactive-Protein"
+        },
+        {
+          "dataType": [
+            "sc:Text"
+          ],
+          "source": {
+            "distribution": "Blood_samples_dataset_balanced_2-f-.csv",
+            "extract": {
+              "column": "Disease"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Disease"
+        }
+      ],
+      "@type": "ml:RecordSet",
+      "name": "Blood_samples_dataset_balanced_2-f-.csv_records",
+      "description": "# The feature used in this dataset and it\u0027s discerption  or the (Blood parameters):\n * Cholesterol: This is the level of cholesterol in the blood, measured in milligrams per deciliter (mg/dL).\n * Hemoglobin: This is the protein in red blood cells that carries oxygen from the lungs to the rest of the body\n * Platelets: Platelets are blood cells that help with clotting\n * White Blood Cells (WBC): These are cells of the immune system that help fight infections\n * Red Blood Cells (RBC): These are the cells that carry oxygen from the lungs to the rest of the body\n * Hematocrit: This is the percentage of blood volume that is occupied by red blood cells\n * Mean Corpuscular Volume (MCV): This is the average volume of red blood cells\n * Mean Corpuscular Hemoglobin (MCH): This is the average amount of hemoglobin in a red blood cell\n * Mean Corpuscular Hemoglobin Concentration (MCHC): This is the average concentration of hemoglobin in a red blood cell\n * Insulin: This is a hormone that helps regulate blood sugar levels\n * BMI (Body Mass Index): This is a measure of body fat based on height and weight\n * Systolic Blood Pressure (SBP): This is the pressure in the arteries when the heart beats\n * Diastolic Blood Pressure (DBP): This is the pressure in the arteries when the heart is at rest between beats\n * Triglycerides: These are a type of fat found in the blood, measured in milligrams per deciliter (mg/dL)\n * HbA1c (Glycated Hemoglobin): This is a measure of average blood sugar levels over the past two to three months\n * LDL (Low-Density Lipoprotein) Cholesterol: This is the \u0022bad\u0022 cholesterol that can build up in the arteries\n * HDL (High-Density Lipoprotein) Cholesterol: This is the \u0022good\u0022 cholesterol that helps remove LDL cholesterol from the arteries\n * ALT (Alanine Aminotransferase): This is an enzyme found primarily in the liver\n * AST (Aspartate Aminotransferase): This is an enzyme found in various tissues including the liver and heart\n * Heart Rate: This is the number of heartbeats per minute (bpm)\n * Creatinine: This is a waste product produced by muscles and filtered out of the blood by the kidneys\n * Troponin: This is a protein released into the bloodstream when there is damage to the heart muscle\n * C-reactive Protein (CRP): This is a marker of inflammation in the body\n * Disease: This indicates whether he has a specific disease or not"
+    },
+    {
+      "field": [
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Glucose"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Glucose"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Cholesterol"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Cholesterol"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Hemoglobin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Hemoglobin"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Platelets"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Platelets"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "White Blood Cells"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "White-Blood-Cells"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Red Blood Cells"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Red-Blood-Cells"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Hematocrit"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Hematocrit"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Mean Corpuscular Volume"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Mean-Corpuscular-Volume"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Mean Corpuscular Hemoglobin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Mean-Corpuscular-Hemoglobin"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Mean Corpuscular Hemoglobin Concentration"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Mean-Corpuscular-Hemoglobin-Concentration"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Insulin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Insulin"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "BMI"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "BMI"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Systolic Blood Pressure"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Systolic-Blood-Pressure"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Diastolic Blood Pressure"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Diastolic-Blood-Pressure"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Triglycerides"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Triglycerides"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "HbA1c"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "HbA1c"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "LDL Cholesterol"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "LDL-Cholesterol"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "HDL Cholesterol"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "HDL-Cholesterol"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "ALT"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "ALT"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "AST"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "AST"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Heart Rate"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Heart-Rate"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Creatinine"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Creatinine"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Troponin"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Troponin"
+        },
+        {
+          "dataType": [
+            "sc:Float"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "C-reactive Protein"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "C-reactive-Protein"
+        },
+        {
+          "dataType": [
+            "sc:Text"
+          ],
+          "source": {
+            "distribution": "blood_samples_dataset_test.csv",
+            "extract": {
+              "column": "Disease"
+            }
+          },
+          "@type": "ml:Field",
+          "name": "Disease"
+        }
+      ],
+      "@type": "ml:RecordSet",
+      "name": "blood_samples_dataset_test.csv_records"
+    }
+  ],
+  "@type": "sc:Dataset",
+  "name": "Multiple-Disease-Prediction",
+  "description": "A dataset to check the health, whether the person has a specific disease or he is well, based on blood samples or parameters, the data is hand madden, you can use it just for learning, i searched about the percentage of each parameter and what will happen if this parameter high or low, and which disease you might have if this parameter high or low, based on all this information and searches i created this dataset just for learning and a project idea purpose\nAlso, the data is already scaled in range(0,1)\n## this is the percentage of each parameter:\n    \u0022Glucose\u0022: (70, 140),  # mg/dL\n    \u0022Cholesterol\u0022: (125, 200),  # mg/dL\n    \u0022Hemoglobin\u0022: (13.5, 17.5),  # g/dL\n    \u0022Platelets\u0022: (150000, 450000),  # per microliter of blood\n    \u0022White Blood Cells\u0022: (4000, 11000),  # per cubic millimeter of blood\n    \u0022Red Blood Cells\u0022: (4.2, 5.4),  # million cells per microliter of blood\n    \u0022Hematocrit\u0022: (38, 52),  # percentage\n    \u0022Mean Corpuscular Volume\u0022: (80, 100),  # femtoliters\n    \u0022Mean Corpuscular Hemoglobin\u0022: (27, 33),  # picograms\n    \u0022Mean Corpuscular Hemoglobin Concentration\u0022: (32, 36),  # grams per deciliter\n    \u0022Insulin\u0022: (5, 25),  # microU/mL\n    \u0022BMI\u0022: (18.5, 24.9),  # kg/m^2\n    \u0022Systolic Blood Pressure\u0022: (90, 120),  # mmHg\n    \u0022Diastolic Blood Pressure\u0022: (60, 80),  # mmHg\n    \u0022Triglycerides\u0022: (50, 150),  # mg/dL\n    \u0022HbA1c\u0022: (4, 6),  # percentage\n    \u0022LDL Cholesterol\u0022: (70, 130),  # mg/dL\n    \u0022HDL Cholesterol\u0022: (40, 60),  # mg/dL\n    \u0022ALT\u0022: (10, 40),  # U/L\n    \u0022AST\u0022: (10, 40),  # U/L\n    \u0022Heart Rate\u0022: (60, 100),  # beats per minute\n    \u0022Creatinine\u0022: (0.6, 1.2),  # mg/dL\n    \u0022Troponin\u0022: (0, 0.04),  # ng/mL\n    \u0022C-reactive Protein\u0022: (0, 3),  # mg/L"
+}
